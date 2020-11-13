@@ -19,3 +19,5 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i '$a src-git argon-mc https://github.com/sypopo/luci-theme-argon-mc.git' feeds.conf.default
 sed -i '$a src-git butterfly https://github.com/Leo-Jo-My/luci-theme-Butterfly.git' feeds.conf.default
 sed -i '$a src-git rosy https://github.com/rosywrt/luci-theme-rosy.git' feeds.conf.default
+
+cat feeds.conf.default
