@@ -14,6 +14,8 @@ on:
   push: 
     branches:
       - master
+    paths:                           
+      - trigger/mi4.md
   repository_dispatch:
   workflow_dispatch:
     inputs:
