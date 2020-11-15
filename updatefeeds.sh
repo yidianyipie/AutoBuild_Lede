@@ -20,4 +20,8 @@ sed -i '$a src-git argonmc https://github.com/sypopo/luci-theme-argon-mc.git' fe
 sed -i '$a src-git butterfly https://github.com/Leo-Jo-My/luci-theme-Butterfly.git' feeds.conf.default
 sed -i '$a src-git rosy https://github.com/rosywrt/luci-theme-rosy.git' feeds.conf.default
 
+echo '添加主题argon'
+git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
+echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
+
 cat feeds.conf.default
