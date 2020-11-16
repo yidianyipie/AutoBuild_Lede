@@ -12,3 +12,7 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+
+echo '添加主题argon'
+git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
+echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
