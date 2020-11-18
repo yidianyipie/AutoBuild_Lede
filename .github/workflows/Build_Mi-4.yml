@@ -23,8 +23,9 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
+  # 定时任务在utc的9点执行，换算北京时间需要 + 8也就是凌晨五点
   schedule:
-    - cron: 0 02 * * *
+    - cron: 0 21 * * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
