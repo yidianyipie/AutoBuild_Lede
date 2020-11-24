@@ -31,7 +31,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: d2.config
+  CONFIG_FILE: d2_lineol.config
   DIY_P1_SH: updatefeeds.sh
   DIY_P2_SH: updateimage.sh
   UPLOAD_BIN_DIR: false
@@ -77,6 +77,15 @@ jobs:
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
+    
+    - name: rm lienol packages
+      run: |
+        cd openwrt
+        rm -rf feeds/lienol/lienol/ipt2socks
+        rm -rf feeds/lienol/lienol/shadowsocksr-libev
+        rm -rf feeds/lienol/lienol/pdnsd-alt
+        rm -rf feeds/lienol/package/verysync
+        rm -rf feeds/lienol/lienol/luci-app-verysync
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
