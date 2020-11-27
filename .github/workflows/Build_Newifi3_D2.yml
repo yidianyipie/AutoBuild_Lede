@@ -32,8 +32,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: d2_lineol.config
-  DIY_P1_SH: updatefeeds.sh
-  DIY_P2_SH: updateimage.sh
+  DIY_P1_SH: common/updatefeeds.sh
+  DIY_P2_SH: common/updateimage.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false

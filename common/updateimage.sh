@@ -20,4 +20,3 @@ echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
 
 # git clone https://github.com/tty228/luci-app-serverchan.git package/lean/luci-app-serverchan
 # echo 'CONFIG_PACKAGE_luci-app-serverchan=y' >> .config
-
