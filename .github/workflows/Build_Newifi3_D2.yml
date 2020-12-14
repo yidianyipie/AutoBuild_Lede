@@ -68,16 +68,6 @@ jobs:
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
-    
-    - name: rm lienol packages
-      run: |
-        cd openwrt
-        rm -rf feeds/lienol/lienol/ipt2socks
-        rm -rf feeds/lienol/lienol/shadowsocksr-libev
-        rm -rf feeds/lienol/lienol/pdnsd-alt
-        rm -rf feeds/lienol/package/verysync
-        rm -rf feeds/lienol/lienol/luci-app-verysync
-        ls feeds/lienol/lienol
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
