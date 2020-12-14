@@ -21,7 +21,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: d2_lineol.config
+  CONFIG_FILE: d2.config
   DIY_P1_SH: common/updatefeeds.sh
   DIY_P2_SH: common/updateimage.sh
   UPLOAD_BIN_DIR: false

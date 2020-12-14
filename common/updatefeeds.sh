@@ -17,7 +17,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 # add lienol package
-sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+# sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 # Add Theme
 sed -i '$a src-git argonmc https://github.com/sypopo/luci-theme-argon-mc.git' feeds.conf.default
