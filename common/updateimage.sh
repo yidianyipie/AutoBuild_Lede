@@ -23,3 +23,13 @@ echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
 #echo 'CONFIG_PACKAGE_luci-theme-atmaterial=y' >> .config
 # git clone https://github.com/tty228/luci-app-serverchan.git package/lean/luci-app-serverchan
 # echo 'CONFIG_PACKAGE_luci-app-serverchan=y' >> .config
+
+# 创建文件夹并下载文件
+sudo mkdir /lib/firmware/i915
+sudo curl -L https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/i915/kbl_dmc_ver1_04.bin -o /lib/firmware/i915/kbl_dmc_ver1_04.bin
+
+# 添加 'i915/kbl_dmc_ver1_04.bin'
+CONFIG_FIRMWARE_IN_KERNEL=y
+echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-5.4
+echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-5.4
+echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-5.4
