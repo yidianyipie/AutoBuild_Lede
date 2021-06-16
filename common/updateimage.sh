@@ -33,3 +33,10 @@ CONFIG_FIRMWARE_IN_KERNEL=y
 echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-5.4
 echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-5.4
 echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-5.4
+
+# 执行kernel命令
+# 查看
+ls target/linux/x86/
+echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-5.10
+echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-5.10
+echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-5.10
