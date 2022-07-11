@@ -24,5 +24,6 @@ sed -i '$a src-git argonmc https://github.com/sypopo/luci-theme-argon-mc.git' fe
 sed -i '$a src-git butterfly https://github.com/Leo-Jo-My/luci-theme-Butterfly.git' feeds.conf.default
 sed -i '$a src-git rosy https://github.com/rosywrt/luci-theme-rosy.git' feeds.conf.default
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+sed -i '$a src-git openclash https://github.com/vernesong/OpenClash' feeds.conf.default
 
 cat feeds.conf.default
