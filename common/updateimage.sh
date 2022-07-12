@@ -18,6 +18,12 @@ git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-th
 echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
 
 
+echo '添加openclash'
+echo 'CONFIG_FEED_openclash=y' >> .config
+echo 'CONFIG_PACKAGE_luci-app-openclash=y' >> .config
+
+
+
 #echo '添加主题atmaterial'
 #git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
 #echo 'CONFIG_PACKAGE_luci-theme-atmaterial=y' >> .config
