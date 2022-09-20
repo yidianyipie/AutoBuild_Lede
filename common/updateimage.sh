@@ -31,6 +31,7 @@ echo 'CONFIG_PACKAGE_luci-app-openclash=y' >> .config
 # echo 'CONFIG_PACKAGE_luci-app-serverchan=y' >> .config
 
 # 创建文件夹并下载文件
+sudo ls /lib/firmware
 sudo mkdir /lib/firmware/i915
 sudo curl -L https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/i915/kbl_dmc_ver1_04.bin -o /lib/firmware/i915/kbl_dmc_ver1_04.bin
 
