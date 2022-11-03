@@ -1,12 +1,7 @@
 name: 'Delete old artifacts'
-
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  schedule:
+    - cron: '0 * * * *' # every hour
 
 jobs:
   delete-artifacts:
@@ -15,4 +10,4 @@ jobs:
       - uses: kolpav/purge-artifacts-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          expire-in: 0days
+          expire-in: 2days # Setting this to 0 will delete all artifacts
