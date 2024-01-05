@@ -18,9 +18,9 @@ git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-th
 echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
 
 
-echo '添加openclash'
-echo 'CONFIG_FEED_openclash=y' >> .config
-echo 'CONFIG_PACKAGE_luci-app-openclash=y' >> .config
+# echo '添加openclash'
+# echo 'CONFIG_FEED_openclash=y' >> .config
+# echo 'CONFIG_PACKAGE_luci-app-openclash=y' >> .config
 
 
 
