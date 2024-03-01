@@ -232,6 +232,7 @@ jobs:
     - name: Delete Old Releases
       uses: dev-drprasad/delete-older-releases@master
       with:
+        repo: yidianyipie/AutoBuild_Lede
         keep_latest: 3
         delete_tags: true
       env:
