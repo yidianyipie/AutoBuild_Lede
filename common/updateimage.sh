@@ -58,3 +58,9 @@ echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-5.10
 echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-6.1
 echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-6.1
 echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-6.1
+
+
+# 修改libdaq版本
+
+sed -i "s/3.0.11/3.0.14/g" feeds/packages/libs/libdaq3/Makefile
+
