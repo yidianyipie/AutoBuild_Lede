@@ -63,4 +63,4 @@ echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-6.1
 # 修改libdaq版本
 
 sed -i "s/3.0.11/3.0.14/g" feeds/packages/libs/libdaq3/Makefile
-
+sed -i "s/c9b691e113960cc19c4df6e93eacbdb45c96491da9c81471f3e419b91c04579a/521364d69f8b764281ce39924d2e4c4c43348c7679768c41246adea9c7a31cc3/g" feeds/packages/libs/libdaq3/Makefile
