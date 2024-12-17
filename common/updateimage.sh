@@ -50,6 +50,7 @@ echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-5.10
 echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-5.10
 echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-5.10
 
+ls target/linux/x86/
 # 添加 'i915/kbl_dmc_ver1_04.bin' 到5.15的内核
 echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-5.15
 echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-5.15
