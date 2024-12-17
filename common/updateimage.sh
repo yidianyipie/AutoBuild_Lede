@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
 
 echo '添加主题argon'
 git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
@@ -37,13 +37,10 @@ sudo curl -L https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firm
 
 # 添加 'i915/kbl_dmc_ver1_04.bin' 到6.6的内核
 # CONFIG_FIRMWARE_IN_KERNEL=y
-#echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-5.4
-#echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-5.4
-#echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-5.4
+echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-5.4
+echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-5.4
+echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-5.4
 
-echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-6.6
-echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-6.6
-echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-6.6
 
 # 执行kernel命令
 # 查看
@@ -53,11 +50,22 @@ echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-5.10
 echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-5.10
 echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-5.10
 
+# 添加 'i915/kbl_dmc_ver1_04.bin' 到5.15的内核
+echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-5.15
+echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-5.15
+echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-5.15
 
 
+
+# 添加 'i915/kbl_dmc_ver1_04.bin' 到6.1的内核
 echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-6.1
 echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-6.1
 echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-6.1
+
+# 添加 'i915/kbl_dmc_ver1_04.bin' 到6.6的内核
+echo 'CONFIG_FIRMWARE_IN_KERNEL=y' >> target/linux/x86/config-6.6
+echo 'CONFIG_EXTRA_FIRMWARE="i915/kbl_dmc_ver1_04.bin"' >> target/linux/x86/config-6.6
+echo 'CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"' >> target/linux/x86/config-6.6
 
 
 # 修改libdaq版本
